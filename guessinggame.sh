@@ -1,21 +1,20 @@
-echo "How many files are in the current directory?"
-echo "Try to guess typing a number and then press Enter"
-read response
 function congrats {
  echo "Congratulations!"
 }
-for i in "$response"
+response=0
+files=$(ls -1q | wc -l)
+while [[ $response  -ne $files ]]
 do
-	if [[ "$response" -eq 3 ]]; then
-	congrats
-	elif [[ "$response" -ne 3 ]]; then
-	echo "Too low or too high. Try again"
+	echo "How many files are in the current directory?"
+	echo "Try to guess typing a number and then press Enter"
 	read response
-		if [[ "$response" -eq 3 ]]; 
-		then congrats
-		else 
-			echo "Too low or too high. Run bash script again"
-		fi
+	if [[ $response -gt $files ]]
+	then 
+		echo "Too high, try again!"
+	elif [[ $response -lt $files ]]
+	then 
+		echo "Too low, try again!"
 	fi
 done
 
+congrats
