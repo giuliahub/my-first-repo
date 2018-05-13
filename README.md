@@ -1,5 +1,7 @@
 ## Title of the project: The Unix Workbench - Coursera
+**Date and Time**: Dom 13 Mag 2018 19:28:48 CEST
 
-**Date**: 13 May 2018; **Time**: 17.46
 
-*21* guessinggame.sh
+**Number of lines in guessingame.sh**: 
+
+
